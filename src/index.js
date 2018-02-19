@@ -10,6 +10,7 @@ import { Provider } from 'react-redux';
 import { dashboardApp } from './reducers';
 import  logger from 'redux-logger'
 
+
 let store = createStore(
     dashboardApp,
     applyMiddleware(
@@ -18,11 +19,16 @@ let store = createStore(
     )
 );
 
+function datalog() {
+    console.log('Ferdis Datalog: ', store.getState());
+}
+store.subscribe(datalog)
 
 ReactDOM.render(
     <Provider store={store}>
         <App />
     </Provider> , 
+    document.getElementById('root'));
 
-document.getElementById('root'));
 registerServiceWorker();
+

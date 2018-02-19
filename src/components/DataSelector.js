@@ -20,35 +20,34 @@ const CommentList = ({ comments, onCommentClick }) => (
 export class DataSelector extends React.Component {
   render(){
     return(
-      <div onClick={this.props.onSelectorClick(this.props.id)} style={this.props.style}>
+      <div onClick={() => this.props.onClick(this.props.id)} style={this.props.style}>
           Here is dataset with id: {this.props.id} of AG: {this.props.AG}
       </div>
     )
   }
 }
 
-const mapStateToProps = (state, ownProps) => {
-    return {
-      data: state.data
-    }
-}
-  
-const mapDispatchToProps = (dispatch, ownProps) => {
-    return {
-      loadData: () => {
-        dispatch(fetchDatasets())
-      },
-      onSelectorClick: (id) => {
-        dispatch(toggleDataset(id))
-      }
-
-    }
-}
-
-DataSelector = connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(DataSelector)
+//const mapStateToProps = (state, ownProps) => {
+//    return {
+//      data: state.dataStorage.data
+//    }
+//}
+//  
+//const mapDispatchToProps = (dispatch, ownProps) => {
+//    return {
+//      loadData: () => {
+//        dispatch(fetchDatasets())
+//      },
+//      onSelectorClick: (id) => {
+//        dispatch(toggleDataset(id))
+//      }
+//    }
+//}
+//
+//DataSelector = connect(
+//    mapStateToProps,
+//    mapDispatchToProps
+//  )(DataSelector)
 
 //DataSelector.propTypes = {
 //  data: PropTypes.arrayOf(

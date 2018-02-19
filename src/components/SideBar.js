@@ -29,30 +29,31 @@ const CommentList = ({ comments, onCommentClick }) => (
 export class SideBar extends React.Component {
   constructor(props){
       super(props);
-      this.componentDidMount = this.componentDidMount.bind(this);
+      this.componentWillMount = this.componentWillMount.bind(this);
   }
   
-  componentDidMount() {
+  componentWillMount() {
       this.props.loadData();
   }
 
   render(){
-    if(this.props.isFetching) {
+    console.log('NOW, SideBar.render is fired. Next, this.props.data is tested')
+    if(!this.props.data) {
         return(
             <p>Data currently loading</p>
         )
     } else {
-        return( <p> data already loaded </p>
-            //<ul>
-            //    {this.props.data.map((dataset, index) => (
-            //        <DataSelector 
-            //            key={index} 
-            //            {...dataset}
-            //            onClick={() => this.props.toggleDataset(dataset.id)} 
-            //            style={dataset.selected? styles.selected : styles.unselected}
-            //        />
-            //    ))}
-            //</ul>
+        return( //<p> data already loaded </p>
+            <ul>
+                {this.props.data.map((dataset, index) => (
+                    <DataSelector 
+                        key={index} 
+                        {...dataset}
+                        onClick={() => this.props.onSelectorClick(dataset.id)} 
+                        style={dataset.selected? styles.selected : styles.unselected}
+                    />
+                ))}
+            </ul>
         )
     }
   }
@@ -61,8 +62,8 @@ export class SideBar extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
     return {
-      data: state.data,
-      isFetching: state.isFetching,
+      data: state.dataStorage.data,
+      isFetching: state.fetchIndicating.isFetching,
     }
 }
   

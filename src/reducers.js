@@ -6,40 +6,38 @@ const initialState = {
     isFetching: false,
 }
 
-function requestData(state = initialState, action) {
+function fetchIndicating(state = initialState.isFetching, action) {
     switch(action.type){
         case REQUEST_DATASETS:
-            return { ...state,
+            return Object.assign({}, state, {
                 isFetching: true,
-                };
+                }
+            );
+        case RECEIVE_DATASETS:
+            return Object.assign({}, state, {
+                isFetching: false,
+                }
+            );
         default:
             return state;
     }
 }
 
-function receiveData(state = initialState, action) {
+function dataStorage(state = initialState.data, action) {
     switch(action.type){
         case RECEIVE_DATASETS:
-            const newData = action.data.map((element, index) => {
+            const receivedData = action.data.map((element, index) => {
                 return {
                     ...element,
                     selected: false
                 }
             });
-            return {
-                ...state,
-                data: newData,
-                isFetching: false,
-            };
-        default:
-            return state;
-    }
-}
-
-function toggleData(state = initialState, action) {
-    switch(action.type) {
+            return Object.assign({}, state, {
+                data: receivedData,
+                }
+            );
         case TOGGLE_DATASET:
-            const newData = state.data.map((element, index) => {
+            const toggledData = state.data.map((element, index) => {
                 if(element.id === action.id){
                     return {
                         ...element,
@@ -49,18 +47,16 @@ function toggleData(state = initialState, action) {
                     return element;
                 }
             });
-            return {
-                ...state,
-                data: newData,
-            };
+            return Object.assign({}, state, {
+                data: toggledData,
+                }
+            );
         default:
             return state;
     }
 }
 
-
 export const dashboardApp = combineReducers({
-    requestData,
-    receiveData,
-    toggleData,
+    fetchIndicating,
+    dataStorage,
 })
