@@ -1,5 +1,8 @@
+import fetch from 'cross-fetch';
+
 //const sqlite3 = require('sqlite3').verbose();
 //let db = new sqlite3.Database(':memory:');
+
 
 //let db = new sqlite3.Database('./database/herzberg.db');
 
@@ -17,7 +20,7 @@ export const TOGGLE_DATASET = 'TOGGLE_DATASET';
  */
 
 
-export function selectDataset(id) {
+export function toggleDataset(id) {
     return { type: TOGGLE_DATASET, id }
   }
 
@@ -33,15 +36,20 @@ export function receiveDatasets( data ) {
 //    return dispatch => {
 //      dispatch(requestDatasets())
 //      return (
-//        db.all("SELECT * FROM hplc ORDER BY id", (error, rows) => {
-//          try{
-//            console.log(rows);
-//            dispatch(receiveDatasets(rows));
-//          } catch (e) {
-//            console.log(e)
-//          }
+//        
 //        })
 //      )
 //    }
 //  }
 
+export function fetchDatasets() {
+  return dispatch => {
+    dispatch(requestDatasets())
+    return fetch(`http://localhost:3000/hplc`)
+      .then(response => response.json())
+      .then(json => { 
+        console.log('FERDI: RESPONSE FROM SERVER: ', json)
+        dispatch(receiveDatasets( json.result ))
+      })
+  }
+}
