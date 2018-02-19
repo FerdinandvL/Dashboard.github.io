@@ -1,0 +1,49 @@
+DROP TABLE IF EXISTS hplc; 
+CREATE TABLE hplc (
+id INTEGER PRIMARY KEY AUTOINCREMENT, 
+initialgroup TEXT, 
+cluster INTEGER, 
+isolate TEXT,
+AG TEXT, 
+RT_7_96 FLOAT, 
+RT_8_48 FLOAT, 
+RT_8_83 FLOAT, 
+RT_9_17 FLOAT, 
+RT_9_62 FLOAT, 
+RT_10_07 FLOAT, 
+RT_10_21 FLOAT, 
+RT_10_6 FLOAT, 
+RT_10_83 FLOAT, 
+RT_11_91 FLOAT, 
+RT_12_18 FLOAT, 
+RT_12_96 FLOAT, 
+RT_13_41 FLOAT, 
+RT_13_8 FLOAT, 
+RT_14_026 FLOAT, 
+RT_15_91 FLOAT, 
+RT_16_55 FLOAT, 
+RT_17_14 FLOAT,
+bioassay INTEGER,
+Country_of_origin TEXT,
+antibiotic_effect INTEGER);
+
+
+
+
+
+INSERT INTO hplc (initialgroup, cluster, isolate, AG, RT_7_96, RT_8_48, RT_8_83, RT_9_17, RT_9_62, RT_10_07, RT_10_21, RT_10_6, RT_10_83, RT_11_91, RT_12_18, RT_12_96, RT_13_41, RT_13_8, RT_14_026, RT_15_91, RT_16_55, RT_17_14, bioassay, Country_of_origin, antibiotic_effect ) VALUES  ( "AG1",        1,	"A1",	"1-1B",	        0,	        0,	    0,	        4,	        7.742,	    0,	    0,	    0,	    0,	    0,	        6.22,	    0,	        28.425,	    8.623,	    8.00,	0,	    11.46,	    6.43,	    1,	"Japan",	        0   );
+INSERT INTO hplc (initialgroup, cluster, isolate, AG, RT_7_96, RT_8_48, RT_8_83, RT_9_17, RT_9_62, RT_10_07, RT_10_21, RT_10_6, RT_10_83, RT_11_91, RT_12_18, RT_12_96, RT_13_41, RT_13_8, RT_14_026, RT_15_91, RT_16_55, RT_17_14, bioassay, Country_of_origin, antibiotic_effect ) VALUES  ( "AG1",        1,	"A2",	"1-1C",	        0,	        0,	    8.407,	    11.18,	    12.744,	    0,	    0,	    0,	    0,	    0,	        7.085,	    0,	        22.172,	    5.942,	    9.00,	0,	    35.408,	    1.794,	    1,	"Japan",	        0   );
+INSERT INTO hplc (initialgroup, cluster, isolate, AG, RT_7_96, RT_8_48, RT_8_83, RT_9_17, RT_9_62, RT_10_07, RT_10_21, RT_10_6, RT_10_83, RT_11_91, RT_12_18, RT_12_96, RT_13_41, RT_13_8, RT_14_026, RT_15_91, RT_16_55, RT_17_14, bioassay, Country_of_origin, antibiotic_effect ) VALUES  ( "other",	    2,	"A3",	"2-1",	        0,	        0,	    1.85,	    0,	        0,	        0,	    0,	    0,	    0,	    3.035,	    0,	        6.947,	    6.926,	    11.389,	    0,      0,      8.486,	    0,	        1,	"Japan",	        1   );
+INSERT INTO hplc (initialgroup, cluster, isolate, AG, RT_7_96, RT_8_48, RT_8_83, RT_9_17, RT_9_62, RT_10_07, RT_10_21, RT_10_6, RT_10_83, RT_11_91, RT_12_18, RT_12_96, RT_13_41, RT_13_8, RT_14_026, RT_15_91, RT_16_55, RT_17_14, bioassay, Country_of_origin, antibiotic_effect ) VALUES  ( "other",	    3,	"A4",	"2-1",	        0,	        0,	    1.844,	    0,	        0,	        0,	    30.103,	5.266,	0,	    2.89,	    0,	        18.374,	    3.662,	    6.483,	    0,	    3.236,	2.017,	    0,	        1,	"Netherlands",	    0   );
+INSERT INTO hplc (initialgroup, cluster, isolate, AG, RT_7_96, RT_8_48, RT_8_83, RT_9_17, RT_9_62, RT_10_07, RT_10_21, RT_10_6, RT_10_83, RT_11_91, RT_12_18, RT_12_96, RT_13_41, RT_13_8, RT_14_026, RT_15_91, RT_16_55, RT_17_14, bioassay, Country_of_origin, antibiotic_effect ) VALUES  ( "AG2-2",	    2,	"A5",	"2-2",	        0,	        0,	    8.342,	    0,	        0.5,	    0.912,	0,	    0,	    0,	    0.5309,	    0,	        6.625,	    1.637,	    0,	        0,	    0,	    0,	        0,	        1,	"Netherlands",	    0   );
+INSERT INTO hplc (initialgroup, cluster, isolate, AG, RT_7_96, RT_8_48, RT_8_83, RT_9_17, RT_9_62, RT_10_07, RT_10_21, RT_10_6, RT_10_83, RT_11_91, RT_12_18, RT_12_96, RT_13_41, RT_13_8, RT_14_026, RT_15_91, RT_16_55, RT_17_14, bioassay, Country_of_origin, antibiotic_effect ) VALUES  ( "AG2-2IIIB",	2,	"A10",	"2-2IIIB",	    0,	        0,	    7.283,	    2,	        0.832,	    12.893,	0,	    0,	    2.435,	3,	        0,	        10,	        4.15,	    5.843,	    0,	    0,	    0,	        0,	        1,	"Japan",	        1   );
+INSERT INTO hplc (initialgroup, cluster, isolate, AG, RT_7_96, RT_8_48, RT_8_83, RT_9_17, RT_9_62, RT_10_07, RT_10_21, RT_10_6, RT_10_83, RT_11_91, RT_12_18, RT_12_96, RT_13_41, RT_13_8, RT_14_026, RT_15_91, RT_16_55, RT_17_14, bioassay, Country_of_origin, antibiotic_effect ) VALUES  ( "AG2-2IIIB",	2,	"A11",	"2-2IIIB",	    0,	        0,	    1.744,	    0,	        1.266,	    3.275,	0,	    0.428,	0,	    1.5,	    1.7,	    13.548,	    1.995,	    2.983,	    0,	    0.996,	1.21,	    0,	        1,	"Netherlands",	    1   );
+INSERT INTO hplc (initialgroup, cluster, isolate, AG, RT_7_96, RT_8_48, RT_8_83, RT_9_17, RT_9_62, RT_10_07, RT_10_21, RT_10_6, RT_10_83, RT_11_91, RT_12_18, RT_12_96, RT_13_41, RT_13_8, RT_14_026, RT_15_91, RT_16_55, RT_17_14, bioassay, Country_of_origin, antibiotic_effect ) VALUES  ( "AG2-2IIIB",	2,	"A12",	"2-2IIIB",	    1.243,	    0,	    8.407,	    1.997,	    3.788,	    6.959,	0,	    2.803,	0,	    3.839,	    1.7,	    25.021,	    5.883,	    7.679,	    0,	    2.43,	3.121,	    0,	        1,	"Netherlands",	    1   );
+INSERT INTO hplc (initialgroup, cluster, isolate, AG, RT_7_96, RT_8_48, RT_8_83, RT_9_17, RT_9_62, RT_10_07, RT_10_21, RT_10_6, RT_10_83, RT_11_91, RT_12_18, RT_12_96, RT_13_41, RT_13_8, RT_14_026, RT_15_91, RT_16_55, RT_17_14, bioassay, Country_of_origin, antibiotic_effect ) VALUES  ( "AG2-2IIIB",	2,	"A13",	"2-2IIIB",	    0,	        0,	    3.408,	    0,	        1.4,	    5.406,	0,	    4.034,	0.5,	0.938,	    0,	        9.107,	    2.525,	    3.561,	    0,	    0,	    1.176,	    0,	        1,	"Netherlands",	    1   );
+INSERT INTO hplc (initialgroup, cluster, isolate, AG, RT_7_96, RT_8_48, RT_8_83, RT_9_17, RT_9_62, RT_10_07, RT_10_21, RT_10_6, RT_10_83, RT_11_91, RT_12_18, RT_12_96, RT_13_41, RT_13_8, RT_14_026, RT_15_91, RT_16_55, RT_17_14, bioassay, Country_of_origin, antibiotic_effect ) VALUES  ( "AG2-2IIIB",	2,	"A14",	"2-2IIIB",	    0,	        0,	    17.03,	    3.052,	    2.555,	    8,	    0,	    0,	    1.463,	5.215,	    1.072,	    18.361,	    3.9,	    4.789,	    0,	    0,	    0,	        0,	        1,	"Netherlands",	    1   );
+INSERT INTO hplc (initialgroup, cluster, isolate, AG, RT_7_96, RT_8_48, RT_8_83, RT_9_17, RT_9_62, RT_10_07, RT_10_21, RT_10_6, RT_10_83, RT_11_91, RT_12_18, RT_12_96, RT_13_41, RT_13_8, RT_14_026, RT_15_91, RT_16_55, RT_17_14, bioassay, Country_of_origin, antibiotic_effect ) VALUES  ( "AG2-2IIIB",	2,	"A15",	"2-2IIIB",	    0,	        2.539,	5.917,	    0,	        1.5,	    1.644,	0,	    0,	    0.5,	1,	        2.69,	    22.873,	    3.912,	    5.434,	    0,	    0,	    9.94,	    1.619,	    1,	"Netherlands",	    1   );
+INSERT INTO hplc (initialgroup, cluster, isolate, AG, RT_7_96, RT_8_48, RT_8_83, RT_9_17, RT_9_62, RT_10_07, RT_10_21, RT_10_6, RT_10_83, RT_11_91, RT_12_18, RT_12_96, RT_13_41, RT_13_8, RT_14_026, RT_15_91, RT_16_55, RT_17_14, bioassay, Country_of_origin, antibiotic_effect ) VALUES  ( "other",	    2,	"A8",	"2-t",	        0,	        2.158,	5.799,	    0,	        0,	        0,	    0,	    0,	    0,	    0,	        0,	        5.142,	    0,	        2.759,	    0,	    2.867,	4.332,	    0,	        1,	"Netherlands",	    0   );
+INSERT INTO hplc (initialgroup, cluster, isolate, AG, RT_7_96, RT_8_48, RT_8_83, RT_9_17, RT_9_62, RT_10_07, RT_10_21, RT_10_6, RT_10_83, RT_11_91, RT_12_18, RT_12_96, RT_13_41, RT_13_8, RT_14_026, RT_15_91, RT_16_55, RT_17_14, bioassay, Country_of_origin, antibiotic_effect ) VALUES  ( "other",	    2,	"A16",	"3",	        1.165,	    2.941,	9.794,	    0,	        0.502,	    0,	    0,	    0,	    0,	    0.631,	    0,	        25.466,	    8.893,	    12.53,	    0,	    5.512,	15.092,	    2.655,	    1,	"Japan",	        1   );
+INSERT INTO hplc (initialgroup, cluster, isolate, AG, RT_7_96, RT_8_48, RT_8_83, RT_9_17, RT_9_62, RT_10_07, RT_10_21, RT_10_6, RT_10_83, RT_11_91, RT_12_18, RT_12_96, RT_13_41, RT_13_8, RT_14_026, RT_15_91, RT_16_55, RT_17_14, bioassay, Country_of_origin, antibiotic_effect ) VALUES  ( "AG2-2IIIB",	4,	"B7",	"2-2IIIB",	    0,	        0,	    1.5,	    0,	        0,	        19.016,	0,	    0,	    0,	    0,	        0,	        28.797,	    8.586,	    9.988,	    0,	    0,	    0,	        0,	        1,	"Germany",	        1   );
+INSERT INTO hplc (initialgroup, cluster, isolate, AG, RT_7_96, RT_8_48, RT_8_83, RT_9_17, RT_9_62, RT_10_07, RT_10_21, RT_10_6, RT_10_83, RT_11_91, RT_12_18, RT_12_96, RT_13_41, RT_13_8, RT_14_026, RT_15_91, RT_16_55, RT_17_14, bioassay, Country_of_origin, antibiotic_effect ) VALUES  ( "AG2-2IIIB",	3,	"B5",	"2-2IIIB",	    0,	        0,	    2,	        0,	        0,	        0,	    0,	    0,	    0,	    0,	        0,	        25,	        4.15,	    7,	        0,	    0,	    0,	        0,	        1,	"Germany",	        1   );
+INSERT INTO hplc (initialgroup, cluster, isolate, AG, RT_7_96, RT_8_48, RT_8_83, RT_9_17, RT_9_62, RT_10_07, RT_10_21, RT_10_6, RT_10_83, RT_11_91, RT_12_18, RT_12_96, RT_13_41, RT_13_8, RT_14_026, RT_15_91, RT_16_55, RT_17_14, bioassay, Country_of_origin, antibiotic_effect ) VALUES  ( "AG2-2IIIB",	3,	"B9",	"2-2IIIB",	    0,	        0,	    2,	        0,	        0,	        0,	    0,	    0,	    0,	    2,	        13.96,	    26.547,	    0,	        7,	        0,	    0,	    0,	        0,	        1,	"Germany",	        1   );
