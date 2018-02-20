@@ -1,3 +1,7 @@
+html {
+  background-color: #222;
+}
+
 .App {
   text-align: center;
 }
@@ -8,14 +12,31 @@
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+  background-color: #202020;
+  height: 17vh;
+  margin: 1vh;
+  padding: 2vh;
   color: white;
+  box-shadow: 0 0 1em #111111;
+  border-radius: 1vh;
 }
 
 .App-title {
-  font-size: 1.5em;
+  color: #009999;
+  text-shadow: 0 0 1em #000000;
+  font-size: 3em;
+  float: left;
+}
+
+.App-subtitle {
+  color: #FFFFFF;
+  text-shadow: 0 0 1em #80808040;
+  font-family: cursive;
+  float: left;
+}
+
+.App-body {
+  left: 0;
 }
 
 .App-intro {
@@ -26,3 +47,4 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+

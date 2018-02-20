@@ -21,7 +21,7 @@ export class DataSelector extends React.Component {
   render(){
     return(
       <div onClick={() => this.props.onClick(this.props.id)} style={this.props.style}>
-          Here is dataset with id: {this.props.id} of AG: {this.props.AG}
+          Here is dataset with id: {this.props.rowMeta.id} of AG: {this.props.rowMeta.AG}
       </div>
     )
   }

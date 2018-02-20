@@ -47,6 +47,6 @@ export function fetchDatasets() {
     dispatch(requestDatasets())
     return fetch(`http://localhost:3000/hplc`)
       .then(response => response.json())
-      .then(json => dispatch(receiveDatasets( json.result )))
+      .then(json => dispatch(receiveDatasets( json.data )))
   }
 }

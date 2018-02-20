@@ -38,7 +38,7 @@ function dataStorage(state = initialState.data, action) {
             );
         case TOGGLE_DATASET:
             const toggledData = state.data.map((element, index) => {
-                if(element.id === action.id){
+                if(element.rowMeta.id === action.id){
                     return {
                         ...element,
                         selected: !element.selected,

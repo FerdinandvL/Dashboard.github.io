@@ -6,24 +6,51 @@ import { DataSelector } from './DataSelector';
 
 const styles = {
     selected: {
-        borderColor: 'black',
-        backgroundColor: 'grey',
+        color: '#999999',
+        borderColor: '#000000',
+        borderWidth: 1,
+        backgroundColor: '#444444',
+        borderRadius: '0.5vh',
+        boxShadow: '0 0 1em #111111',
+        padding: '0.7vh',
+        margin: '0.7vh',
+        textShadow: '0 0 0.5em black'
     },
     unselected: {
-        borderColor: 'black',
-        backgroundColor: 'white'
+        color: '#999999',
+        borderColor: '#000000',
+        borderWidth: 1,
+        backgroundColor: '#222222',
+        borderRadius: '0.5vh',
+        boxShadow: '0 0 1em #050505',
+        padding: '0.7vh',
+        margin: '0.7vh',
+        textShadow: '0 0 0.5em black'
     },
+    SideBar: {
+        position: 'absolute',
+        left: 0,
+        borderColor: '#000000',
+        borderWidth: 1,
+        margin: '1vh',
+        padding: '1vh',
+        fontSize: '11px',
+        backgroundColor: '#222222',
+        borderRadius: '1vh',
+        float: 'left',
+        height: '72vh',
+        width: '20vw',
+        boxShadow: '0 0 1em #111111', 
+    },
+    DataSelector: {
+        borderColor: '#000000',
+        borderWidth: 1,
+        backgroundColor: '#222222',
+        borderRadius: '0.5vh',
+        float: 'left',
+        boxShadow: '0 0 1em #111111',
+    }
 }
-
-/*
-const CommentList = ({ comments, onCommentClick }) => (
-  <ul>
-    {comments.map((comment, index) => (
-      <Comment key={index} {...comment} onClick={() => onCommentClick(index)} />
-    ))}
-  </ul>
-)
-*/
 
 
 export class SideBar extends React.Component {
@@ -40,20 +67,24 @@ export class SideBar extends React.Component {
     console.log('NOW, SideBar.render is fired. Next, this.props.data is tested')
     if(!this.props.data) {
         return(
-            <p>Data currently loading</p>
+            <div style={styles.SideBar}>
+                <p>Data currently loading</p>
+            </div>
         )
     } else {
         return( //<p> data already loaded </p>
-            <ul>
+            <div style={styles.SideBar}>
+                <div style={styles.selected}>This is the Selector Head</div>
                 {this.props.data.map((dataset, index) => (
                     <DataSelector 
-                        key={index} 
+                        key={index}
+                        id={dataset.rowMeta.id} 
                         {...dataset}
-                        onClick={() => this.props.onSelectorClick(dataset.id)} 
+                        onClick={(id) => this.props.onSelectorClick(id)} 
                         style={dataset.selected? styles.selected : styles.unselected}
                     />
                 ))}
-            </ul>
+            </div>
         )
     }
   }
